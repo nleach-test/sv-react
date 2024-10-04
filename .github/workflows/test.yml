@@ -1,0 +1,26 @@
+name: Execute on GitHub Hosted Runner
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-action:
+    permissions:
+      security-events: write
+    runs-on: ubuntu-latest
+    steps:
+     
+      - name: Fetch Code
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+  
+      - name: Test CxOne++
+        uses: nleach-test/cxone-plusplus-github-action@master
+        with:
+          cx-tenant: cx_ps_nathan_leach
+          cx-client-id: ${{ secrets.CX_CLIENT_ID }}
+          cx-client-secret: ${{ secrets.CX_CLIENT_SECRET }}
+          cx-cli-debug: true
+          upload-sarif-file: false
+          
+
+    
+          
