@@ -21,6 +21,8 @@ jobs:
           cx-client-secret: ${{ secrets.CX_CLIENT_SECRET }}
           cx-cli-debug: true
           upload-sarif-file: false
+          cx-cli-additional-params: --file-include=*.jsx
+          
           
 
     
