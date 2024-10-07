@@ -22,6 +22,7 @@ jobs:
           cx-cli-debug: true
           upload-sarif-file: false
           cx-cli-additional-params: --file-include=*.jsx
+          build-container-tag: node:22-alpine
           
           
 
