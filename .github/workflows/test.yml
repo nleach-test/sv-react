@@ -19,7 +19,7 @@ jobs:
           cx-tenant: cx_ps_nathan_leach
           cx-client-id: ${{ secrets.CX_CLIENT_ID }}
           cx-client-secret: ${{ secrets.CX_CLIENT_SECRET }}
-          cx-cli-debug: true
+          cx-cli-debug: false
           upload-sarif-file: false
           cx-cli-additional-params: --file-include=*.jsx
           build-container-tag: node:22-alpine
