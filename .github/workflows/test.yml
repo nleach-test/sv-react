@@ -1,7 +1,11 @@
 name: Execute on GitHub Hosted Runner
 on: 
   push:
+    branches:
+      - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   run-action:
