@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
   
       - name: Test CxOne++
+        id: scan
         uses: nleach-test/cxone-plusplus-github-action@master
         with:
           cx-tenant: cx_ps_nathan_leach
@@ -26,6 +27,14 @@ jobs:
           attach-sarif-file: true
           upload-sarif-file: true
           attach-sbom-file: true
+
+      - name: Display outputs
+        shell: bash
+        run: |
+          echo "Scan ID: ${{ steps.scan.outputs.scan-id }}"
+          echo "Project ID: ${{ steps.scan.outputs.project-id }}"
+          echo "Scan Link: ${{ steps.scan.outputs.project-deeplink }}"
+        
           
           
           
