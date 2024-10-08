@@ -35,11 +35,3 @@ jobs:
           echo "Project ID: ${{ steps.scan.outputs.project-id }}"
           echo "Scan Link: ${{ steps.scan.outputs.project-deeplink }}"
         
-          
-          
-          
-          
-          
-
-    
-          
