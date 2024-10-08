@@ -1,4 +1,4 @@
-name: Checkmarx One Scan
+mnaname: Checkmarx One Scan
 on: 
   push:
     branches:
@@ -21,7 +21,7 @@ jobs:
   
       - name: Scan with CxOne++ Action
         id: scan
-        uses: nleach-test/cxone-plusplus-github-action@master
+        uses: checkmarx-ts/cxone-plusplus-github-action@master
         with:
           cx-tenant: cx_ps_nathan_leach
           cx-client-id: ${{ secrets.CX_CLIENT_ID }}
