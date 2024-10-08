@@ -1,6 +1,7 @@
 name: Execute on GitHub Hosted Runner
 on: 
-  workflow_dispatch:
+  push:
+  pull_request:
 
 jobs:
   run-action:
