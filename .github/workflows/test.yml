@@ -2,10 +2,7 @@ name: Checkmarx One Scan
 on: 
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - test
 
 jobs:
   run-action:
@@ -30,7 +27,7 @@ jobs:
           additional-scan-params: --file-include=*.jsx
           # build-container-tag: node:22
           attach-sarif-file: false
-          upload-sarif-file: true
+          upload-sarif-file: false
           attach-sbom-file: false
 
       - name: Display outputs
