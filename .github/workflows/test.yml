@@ -11,7 +11,7 @@ jobs:
       contents: read
       pull-requests: write
       statuses: write
-    runs-on: self-hosted
+    runs-on: ubuntu
     steps:
       - name: Fetch Code
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
